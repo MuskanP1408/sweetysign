@@ -1,0 +1,167 @@
+html, body {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight:bold;
+    color: white;
+}
+i{
+    background: linear-gradient(to right, #ed9f17, #f75b18);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h4{
+    color: white;
+}
+/* Make the page's body fill the screen */
+body {
+    overflow: hidden; /* Prevent page scroll */
+    position: relative;
+  }
+  
+  /* Bubble styling */
+  .bubble {
+    position: absolute;
+    width:5px;
+    height:5px;
+    background-color: orange;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none; /* Prevent interference with other elements */
+    animation: bubbleAnimation 1s ease-out forwards;
+    will-change: transform;
+    position: absolute;
+    z-index: 100;
+  }
+  
+  /* Animation for bubbles floating */
+
+    @keyframes bubbleAnimation {
+      0% {
+        transform: scale(0.5);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale(0);
+        opacity: 0;
+      }
+    
+  }
+  
+  /* Prevent bubbles from appearing in the navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure navbar is above the bubbles */
+  }
+  .bg-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  /* Homecss.css */
+
+/* Homecss.css */
+
+/* Add the bounce animation */
+.bounce {
+  display: inline-block;
+  animation: bounce 1s ease-out 1; /* 1s duration, runs once */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust bounce height */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Custom Card with border color */
+.custom-card {
+  border: 4px solid #ff6347; /* You can choose the desired border color */
+  position: relative;
+  border: 4px solid transparent; /* Initially set the border to transparent */
+  padding: 20px;
+  animation: borderAnimation 2s ease-out infinite; 
+}
+
+/* Keyframes for the border animation */
+@keyframes borderAnimation {
+  0% {
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+  25% {
+    border-top: 4px solid #ff6347; /* Set top border */
+  }
+  50% {
+    border-top: 4px solid #dcc8c4;
+    border-right: 4px solid #ff6347; /* Set right border */
+  }
+  75% {
+    border-top: 4px solid #dcc8c4;
+    border-right: 4px solid #dcc8c4;
+    border-bottom: 4px solid #ff6347; /* Set bottom border */
+  }
+  100% {
+    border-top: 4px solid #dcc8c4;
+    border-right: 4px solid #dcc8c4;
+    border-bottom: 4px solid #dcc8c4;
+    border-left: 4px solid #ff6347; /* Set left border */
+  }
+}
+
+/* Custom Card Body with transparent background */
+.custom-card-body {
+  background-color: transparent !important; /* Make the body transparent */
+}
+
+.cardSection
+{
+  margin-top: 100px;
+}
+
+.countercard-transparent {
+  background-color: transparent !important;  /* Make the background transparent */
+  border: none !important;  /* Remove the border */
+  box-shadow: none !important;  /* Remove the shadow */
+  color: #fff; /* Set text color to white or any contrasting color */
+}
+
+
+
+
+
+
+
+  /* //-------------------------- Nvabar css ---------------------// */
+  .navbar-link {
+    color: white !important; /* Set link color to white */
+  }
+  
+  .navbar-link:hover {
+    color: orange !important; /* Set hover color for links */
+  }
+
+  .navbar-right {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    width: 100%;
+  }
