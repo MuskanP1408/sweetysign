@@ -75,7 +75,7 @@ export default function Home() {
                 </MDBCol>
                 <MDBCol sm="12" md="4">
                   <h4>Creatofox is a Comprehensive Marketing Company</h4>
-                  <MDBBtn outline color="warning" href="#">
+                  <MDBBtn outline color="info" href="#">
                     Company Profile
                   </MDBBtn>
                 </MDBCol>
@@ -86,7 +86,7 @@ export default function Home() {
       </div>
 
       {/* Cards Section */}
-      <MDBContainer className='cardSection' fluid>
+      <MDBContainer className='cardSection' fluid >
         <MDBRow>
           <MDBCol sm="12" md="4">
             <CounterCard title="Years Of Experience" initialValue={0} limit={5} />

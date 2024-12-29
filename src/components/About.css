@@ -1,32 +1,28 @@
-/* About page styling */
 .about-container {
     background: #000000; /* Dark background */
     color: #ffffff; /* White text */
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items:left;
-    text-align: left;
-    overflow: hidden; */
+    min-height: 100vh; /* Ensures it fills the height of the viewport */
+    margin-bottom: 0; /* Prevents any gap at the bottom */
+    padding-bottom: 0; /* Removes any extra padding */
 }
-.text
-{
+
+.text {
     font-size: 50px;
     margin-left: 40px;
-    font-weight:600;
-    color: #ff6600;
+    font-weight: 600;
+    color: #15eae6;
 }
 
-
-
-p{
-    color: #ff6600;
-    margin-top:60px;
+.heading_text {
+    color: #15eae6;
+    margin-top: 60px;
     font-size: 20px;
     margin-left: 40px;
 }
-h1{
+
+h1 {
     font-size: 2.8rem;
     margin-left: 40px;
     font-family: Arial, sans-serif;
@@ -48,7 +44,7 @@ h1{
     }
 }
 
-.para1{
+.para1 {
     font-size: 14px;
     margin-left: 40px;
 }
@@ -58,15 +54,15 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Spacing between lines */
+    gap: 20px;
     margin-top: 140px;
 }
 
 /* Individual line styling */
 .line {
-    border: 5px solid #ff6600; /* Thick orange border */
-    border-radius: 50px; /* Rounded edges */
-    background: transparent; /* No fill color */
+    border: 5px solid #15eae6;
+    border-radius: 50px;
+    background: transparent;
     animation: pulse 2s infinite ease-in-out;
 }
 
@@ -109,6 +105,116 @@ h1{
     animation-delay: 0.8s;
 }
 
-.d-flex{
-    margin-left:15px;
+/* Image background with reduced opacity */
+.img {
+    background-image: url("/src/components/images/img4.jpg");
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    left: 30px;
+}
+
+.marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 20px;
+    font-size: 80px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    animation: marquee 17s linear infinite;
+    
+
+}
+
+/* Keyframes for marquee effect */
+@keyframes marquee {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.marquee-text2 {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 80px;
+    font-weight: bold;
+    /* margin-top: -1400px; */
+    animation: marquee2 22s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes marquee2 {
+    0% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 768px) {
+
+    .text {
+        margin-top: 150px;
+       
+    }
+
+    .horizontal-lines {
+        display: flex;
+        flex-direction: row; /* Ensure the lines are in a row */
+        justify-content: space-evenly; /* Distribute the lines evenly */
+        align-items: center;
+        gap: 5px; /* Adjust the gap for smaller screens */
+        margin-top: 50px; /* Remove the margin-top */
+        margin-bottom: 20px; /* Add space below the lines */
+    }
+
+   
+
+    /* Smaller lines for mobile/tablet */
+    .line.small {
+        width: 30px; /* Adjust width */
+        height: 70px; /* Adjust height */
+    }
+
+    .line.large {
+        width: 30px; /* Adjust width */
+        height: 120px; /* Adjust height */
+    }
+
+    .brading_smartart{
+        width: 90%;
+        margin-right: 40px;
+    }
+
+    .img {
+        background-image: none;
+        opacity: 0.7;
+        
+    }
+
+    .marquee-text,.marquee-text2{
+        font-size: 40px;
+    }
+
+
+   
 }

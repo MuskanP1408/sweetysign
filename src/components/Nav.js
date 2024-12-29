@@ -12,6 +12,7 @@ import {
   MDBCollapse,
 } from 'mdb-react-ui-kit';
 import './Homecss.css';
+import logo from './images/SAKAR_LOGO.png';
 
 export default function () {
   const [openBasic, setOpenBasic] = useState(false);
@@ -25,7 +26,13 @@ export default function () {
     <MDBNavbar expand='lg' dark bgColor='dark' fixed='top'>
       <MDBContainer fluid>
         <MDBNavbarBrand href='#' onClick={toggleNavbar}>
-          Brand
+        
+        <img
+          src={logo}
+          height='45'
+          alt='Logo'
+         loading='lazy'
+        />
         </MDBNavbarBrand>
 
         <MDBNavbarToggler
