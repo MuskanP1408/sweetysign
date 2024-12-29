@@ -57,11 +57,19 @@ export default function () {
                 <Link className="navbar-link" to="/about">About Us</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
+
             <MDBNavbarItem>
               <MDBNavbarLink>
                 <Link className="navbar-link" to="/">Clients</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
+
+            <MDBNavbarItem>
+              <MDBNavbarLink>
+                <Link className="navbar-link" to="/portfolio">Portfolio</Link>
+              </MDBNavbarLink>
+            </MDBNavbarItem>
+
             <MDBNavbarItem>
               <MDBNavbarLink>
                 <Link className="navbar-link" to="/">Contact Us</Link>

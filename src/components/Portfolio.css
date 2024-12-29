@@ -1,0 +1,73 @@
+.mini_content{
+    display: block; 
+    margin-top: 100px;
+    margin-left: -15.5%;
+    color: white;
+}
+
+
+
+/* Styling the Portfolio Container - Black background behind the cards */
+.bg-black {
+    background-color: #201f1f; /* Black background */
+    position: relative;
+}
+
+/* Styling the Cards with Transparent Background and White Border */
+.custom-card {
+    background-color: transparent !important; /* Transparent background */
+    border: 2px solid #fff; /* White border */
+    color: white; /* White text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.custom-card img {
+    border-bottom: 2px solid #fff; /* Optional border below image */
+}
+
+.custom-card .btn {
+    background-color: #15eae6;
+    color: white;
+    border: none;
+}
+
+.custom-card .btn:hover {
+    background-color: #13b0b6;
+}
+
+.title
+{
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+/* Make the cards responsive */
+@media (max-width: 768px) {
+    .custom-card {
+        margin-bottom: 20px;
+    }
+
+    .mask {
+        padding: 15px;
+    }
+
+    .text {
+        font-size: 35px;
+    }
+
+    .mini_content {
+        font-size: 14px;
+    }
+}
