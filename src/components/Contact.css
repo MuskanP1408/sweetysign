@@ -1,0 +1,27 @@
+.text1{
+    font-size: 50px;
+    margin-left: 40px;
+    font-weight: 600;
+    color: #15eae6;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mini_content_contact{
+    display: block; 
+    margin-top: 150px;
+    margin-left: -75%;
+    color: white;
+}
+
+.form{
+    margin-left: 1%;
+}
+
+.submit_btn
+{
+    width: 100%;
+    background-color: transparent;
+    border: #15eae6 solid 1px;
+}
+

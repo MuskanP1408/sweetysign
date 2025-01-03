@@ -11,13 +11,13 @@ import {
   MDBNavbarLink,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
-import './Homecss.css';
+import './Nav.css';
 import logo from './images/SAKAR_LOGO.png';
 
 export default function () {
   const [openBasic, setOpenBasic] = useState(false);
 
-  // Toggle the navbar when "Brand" is clicked
+  // Toggle the navbar when "hamburger" icon is clicked
   const toggleNavbar = () => {
     setOpenBasic(!openBasic);
   };
@@ -25,27 +25,30 @@ export default function () {
   return (
     <MDBNavbar expand='lg' dark bgColor='dark' fixed='top'>
       <MDBContainer fluid>
-        <MDBNavbarBrand href='#' onClick={toggleNavbar}>
-        
-        <img
-          src={logo}
-          height='45'
-          alt='Logo'
-         loading='lazy'
-        />
+        {/* Logo Section */}
+        <MDBNavbarBrand href='#'>
+          <img
+            src={logo}
+            height='45'
+            alt='Logo'
+            loading='lazy'
+          />
         </MDBNavbarBrand>
 
+        {/* Hamburger Toggler Icon - On smaller screens, the hamburger will appear on the right */}
         <MDBNavbarToggler
           aria-controls='navbarSupportedContent'
           aria-expanded={openBasic ? 'true' : 'false'}
           aria-label='Toggle navigation'
-          onClick={() => setOpenBasic(!openBasic)}
+          onClick={toggleNavbar}
+          className="ms-auto" // Ensures the toggler is aligned to the right
         >
-          <MDBIcon icon='bars' fas />
+          {/* Change the color of the hamburger icon here */}
+          <MDBIcon icon='bars' fas className='hamburger' /> {/* You can replace the color here */}
         </MDBNavbarToggler>
 
+        {/* Navbar Collapse Section */}
         <MDBCollapse navbar open={openBasic}>
-          {/* Apply 'ms-auto' directly to MDBNavbarNav */}
           <MDBNavbarNav className='ms-auto mb-2 mb-lg-0'>
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current='page'>
@@ -60,7 +63,7 @@ export default function () {
 
             <MDBNavbarItem>
               <MDBNavbarLink>
-                <Link className="navbar-link" to="/">Clients</Link>
+                <Link className="navbar-link" to="/clients">Clients</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
 
@@ -72,7 +75,7 @@ export default function () {
 
             <MDBNavbarItem>
               <MDBNavbarLink>
-                <Link className="navbar-link" to="/">Contact Us</Link>
+                <Link className="navbar-link" to="/contact">Contact Us</Link>
               </MDBNavbarLink>
             </MDBNavbarItem>
           </MDBNavbarNav>
